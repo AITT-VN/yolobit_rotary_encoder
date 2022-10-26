@@ -168,8 +168,3 @@ class RotaryIRQ(Rotary):
 
     def _hal_close(self):
         self._hal_disable_irq()
-
-    def get_steps(self):
-        changed_steps = self._value - self._old_value
-        self._old_value = self._value
-        return changed_steps
