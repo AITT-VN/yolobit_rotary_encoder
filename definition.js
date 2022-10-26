@@ -17,7 +17,7 @@ Blockly.Blocks['get_value'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("đọc giá trị encoder");
-    this.setOutput(true, null);
+    this.setOutput(true, "Number");
     this.setColour(50);
  this.setTooltip("");
  this.setHelpUrl("");
@@ -67,18 +67,6 @@ Blockly.Blocks['set_current_value'] = {
   }
 };
 
-Blockly.Blocks['rotary_direction'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("rotary được")
-        .appendField(new Blockly.FieldDropdown([["xoay qua trái"," < 0"], ["xoay qua phải"," > 0"]]), "LR");
-    this.setOutput(true, null);
-    this.setColour(50);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-
 Blockly.Python.addReservedWords('rotary');
 
 Blockly.Python['initialise_rotary_encoder'] = function(block) {
@@ -116,12 +104,4 @@ Blockly.Python['set_current_value'] = function(block) {
   // TODO: Assemble Python into code variable.
   var code = 'rotary_encoder.set(value=' + value_value + ')\n';
   return code;
-};
-
-Blockly.Python['rotary_direction'] = function(block) {
-  var dropdown_lr = block.getFieldValue('LR');
-  // TODO: Assemble Python into code variable.
-  var code = 'rotary_encoder.get_steps()' + dropdown_lr ;
-  // TODO: Change ORDER_NONE to the correct strength.
-  return [code, Blockly.Python.ORDER_NONE];
 };
