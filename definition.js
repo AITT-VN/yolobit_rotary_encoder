@@ -80,7 +80,7 @@ Blockly.Python.definitions_['import_rotary'] = 'from rotary import RotaryIRQ';
 
 Blockly.Python['get_value'] = function(block) {
   // TODO: Assemble Python into code variable.
-  var code = "'%0*d' % ( 2, rotary_encoder.value())";
+  var code = "rotary_encoder.value()";
   return [code, Blockly.Python.ORDER_NONE];
 };
 
