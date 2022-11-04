@@ -7,7 +7,7 @@ Blockly.Blocks['initialise_rotary_encoder'] = {
         .appendField(new Blockly.FieldDropdown([["P0","32"], ["P1","33"], ["P2","27"], ["P3","13"], ["P4","15"], ["P6","12"],["P7","25"], ["P8","17"], ["P9","16"], ["P10","26"], ["P11","14"], ["P12","2"], ["P13","18"], ["P14","19"], ["P15","23"], ["P16","5"], ["P19","22"], ["P20","21"]]), "dt");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(50);
+    this.setColour(#A39400);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -18,7 +18,7 @@ Blockly.Blocks['get_value'] = {
     this.appendDummyInput()
         .appendField("đọc giá trị encoder");
     this.setOutput(true, "Number");
-    this.setColour(50);
+    this.setColour(#A39400);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -35,7 +35,7 @@ Blockly.Blocks['set_range_value'] = {
         .appendField("max");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(50);
+    this.setColour(#A39400);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -48,7 +48,7 @@ Blockly.Blocks['rotary_mode'] = {
         .appendField(new Blockly.FieldDropdown([["không giới hạn"," RotaryIRQ.RANGE_UNBOUNDED"], ["reset khi quay tới max","RotaryIRQ.RANGE_WRAP"], ["dừng tăng khi quay tới max","RotaryIRQ.RANGE_BOUNDED"]]), "mode");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(50);
+    this.setColour(#A39400);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -61,7 +61,7 @@ Blockly.Blocks['set_current_value'] = {
         .appendField("đặt giá trị hiện tại cho encoder");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(50);
+    this.setColour(#A39400);
  this.setTooltip("");
  this.setHelpUrl("");
   }
