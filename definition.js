@@ -1,24 +1,25 @@
+const BlockColor = '#A39400'
 Blockly.Blocks['initialise_rotary_encoder'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("khởi tạo encoder CLK")
-        .appendField(new Blockly.FieldDropdown([["P0","32"], ["P1","33"], ["P2","27"], ["P3","13"], ["P4","15"], ["P6","12"],["P7","25"], ["P8","17"], ["P9","16"], ["P10","26"], ["P11","14"], ["P12","2"], ["P13","18"], ["P14","19"], ["P15","23"], ["P16","5"], ["P19","22"], ["P20","21"]]), "clk")
+        .appendField(new Blockly.FieldDropdown([["P0","pin0.pin"], ["P1","pin1.pin"], ["P2","pin2.pin"], ["P3","pin3.pin"], ["P4","pin4.pin"], ["P6","pin6.pin"],["P7","pin7.pin"], ["P8","pin8.pin"], ["P9","pin9.pin"], ["P10","pin10.pin"], ["P11","pin11.pin"], ["P12","pin12.pin"], ["P13","pin13.pin"], ["P14","pin14.pin"], ["P15","pin15.pin"], ["P16","pin16.pin"]]), "clk")
         .appendField("DT")
-        .appendField(new Blockly.FieldDropdown([["P0","32"], ["P1","33"], ["P2","27"], ["P3","13"], ["P4","15"], ["P6","12"],["P7","25"], ["P8","17"], ["P9","16"], ["P10","26"], ["P11","14"], ["P12","2"], ["P13","18"], ["P14","19"], ["P15","23"], ["P16","5"], ["P19","22"], ["P20","21"]]), "dt");
+        .appendField(new Blockly.FieldDropdown([["P0","pin0.pin"], ["P1","pin1.pin"], ["P2","pin2.pin"], ["P3","pin3.pin"], ["P4","pin4.pin"], ["P6","pin6.pin"],["P7","pin7.pin"], ["P8","pin8.pin"], ["P9","pin9.pin"], ["P10","pin10.pin"], ["P11","pin11.pin"], ["P12","pin12.pin"], ["P13","pin13.pin"], ["P14","pin14.pin"], ["P15","pin15.pin"], ["P16","pin16.pin"]]), "dt");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(#A39400);
+    this.setColour(BlockColor);
  this.setTooltip("");
  this.setHelpUrl("");
   }
 };
-
+// ["P0","pin0.pin"], ["P1","pin1.pin"], ["P2","pin2.pin"], ["P3","pin3.pin"], ["P4","pin4.pin"], ["P6","pin6.pin"],["P7","pin7.pin"], ["P8","pin8.pin"], ["P9","pin9.pin"], ["P10","pin10.pin"], ["P11","pin11.pin"], ["P12","pin12.pin"], ["P13","pin13.pin"], ["P14","pin14.pin"], ["P15","pin15.pin"], ["P16","pin16.pin"]
 Blockly.Blocks['get_value'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("đọc giá trị encoder");
     this.setOutput(true, "Number");
-    this.setColour(#A39400);
+    this.setColour(BlockColor);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -35,7 +36,7 @@ Blockly.Blocks['set_range_value'] = {
         .appendField("max");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(#A39400);
+    this.setColour(BlockColor);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -48,7 +49,7 @@ Blockly.Blocks['rotary_mode'] = {
         .appendField(new Blockly.FieldDropdown([["không giới hạn"," RotaryIRQ.RANGE_UNBOUNDED"], ["reset khi quay tới max","RotaryIRQ.RANGE_WRAP"], ["dừng tăng khi quay tới max","RotaryIRQ.RANGE_BOUNDED"]]), "mode");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(#A39400);
+    this.setColour(BlockColor);
  this.setTooltip("");
  this.setHelpUrl("");
   }
@@ -61,7 +62,7 @@ Blockly.Blocks['set_current_value'] = {
         .appendField("đặt giá trị hiện tại cho encoder");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(#A39400);
+    this.setColour(BlockColor);
  this.setTooltip("");
  this.setHelpUrl("");
   }
